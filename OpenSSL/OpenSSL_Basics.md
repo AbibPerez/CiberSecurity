@@ -58,12 +58,12 @@
 | version                           | -> Muestra la versión de OpenSSL                                              |
 
 ## Message Digest (Hash)
-| Comando                           | Descripción                                                                   |                                          
+| Comando                           | Descripción                                                                   |
 |-----------------------------------|-------------------------------------------------------------------------------|
 | dgst                              | -> Calcula y verifica resúmenes criptográficos                                |
 | Sintaxis                          | [openssl][dgst] [-algoritmo][archivo.txt]                                     |
-#
-| Algoritmos disponibles            | Descripción                                                                   |
+# Algoritmos disponibles
+| Algoritmo                         | Descripción                                                                   |
 |-----------------------------------|-------------------------------------------------------------------------------|
 | md2                               | -> Hash MD2 (obsoleto, inseguro)                                              |
 | md4                               | -> Hash MD4 (obsoleto, inseguro)                                              |
@@ -73,8 +73,10 @@
 | sha1                              | -> SHA-1                                                                      |
 
 
-==> </Ciphers/> <==
-> Prefijo ==> openssl enc -...
+## Ciphers
+| Comando                           | Descripción                                                                   |
+|-----------------------------------|-------------------------------------------------------------------------------|
+# Prefijo ==> openssl enc -...
 enc                                 -> Cifrado y descifrado de archivos con algoritmos simétricos
 *AES —— CBC*
 > Sintaxis ->> [openssl][enc] [-aes-128/192/256-cbc] [-in][archivo.txt] [-out][archivo.enc] [-k][contraseña]
