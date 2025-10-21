@@ -61,7 +61,7 @@
 | Comando                           | Descripción                                                                   |
 |-----------------------------------|-------------------------------------------------------------------------------|
 | dgst                              |  Calcula y verifica resúmenes criptográficos                                |
-#### Sintaxis > openssl [dgst] -[algoritmo] archivo.txt                                     
+#### Sintaxis > openssl dgst -algoritmo archivo.txt                                     
 ### Algoritmos disponibles
 | Algoritmo                         | Descripción                                                                   |
 |-----------------------------------|-------------------------------------------------------------------------------|
@@ -74,14 +74,14 @@
 
 ## Ciphers
 ### AES —— CBC
-#### Sintaxis > [openssl][enc] [-aes-128/192/256-cbc] [-in][archivo.txt] [-out][archivo.enc] [-k][contraseña]
+#### Sintaxis > openssl enc -aes-128/192/256-cbc [-in] archivo.txt [-out] archivo.enc [-k] contraseña
 | Comando                           | Descripción                                                                   |
 |-----------------------------------|-------------------------------------------------------------------------------|
 | -aes-128-cbc                      |  AES de 128 bits en modo CBC                                                |    
 | -aes-192-cbc                      |  AES de 192 bits en modo CBC                                                |
 | -aes-256-cbc                      |  AES de 256 bits en modo CBC                                                |
 ### AES —— ECB
-#### Sintaxis > [openssl][enc] [-aes-128/192/256-ecb] [-in][archivo.txt] [-out][archivo.enc] [-k][contraseña]
+#### Sintaxis > openssl enc -aes-128/192/256-ecb [-in] archivo.txt [-out] archivo.enc [-k] contraseña
 | Comando                           | Descripción                                                                   |
 |-----------------------------------|-------------------------------------------------------------------------------|
 | -aes-128-ecb                      |  AES de 128 bits en modo ECB                                                |
