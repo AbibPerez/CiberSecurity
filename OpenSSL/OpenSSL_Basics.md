@@ -58,9 +58,10 @@
 | version                           | -> Muestra la versión de OpenSSL                                              |
 
 ## Message Digest (Hash)
-| Comando                           | Descripción                                                                   |
-|-----------------------------------|-------------------------------------------------------------------------------|                                        
+| Comando                           | Descripción                                                                   |                                          
+|-----------------------------------|-------------------------------------------------------------------------------|
 | dgst                              | -> Calcula y verifica resúmenes criptográficos                                |
+| Sintaxis                          | [openssl][dgst] [-algoritmo][archivo.txt]                                     |
 #
 | Algoritmos disponibles            | Descripción                                                                   |
 |-----------------------------------|-------------------------------------------------------------------------------|
