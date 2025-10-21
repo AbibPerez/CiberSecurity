@@ -1,6 +1,5 @@
 
 ## Cifrado & Hashing
-|-----------------------------------|-------------------------------------------------------------------------------|
 | Comando                           | Descripción                                                                   | 
 |-----------------------------------|-------------------------------------------------------------------------------|
 | enc                               | -> Cifrado y descifrado de archivos con algoritmos simétricos (<AES, DES>)    |
@@ -9,7 +8,8 @@
 | ciphers                           | -> Lista de los cifrados disponibles en OpenSSL                               |
 | passwd                            | -> Genera contraseñas encriptadas                                             |
 
-## Llaves & Parámetros                                             
+## Llaves & Parámetros   
+| Comando                           | Descripción                                                                   |                                          
 |-----------------------------------|-------------------------------------------------------------------------------|
 | genrsa                            | -> Genera llaves privadas <RSA>                                               |
 | rsa                               | -> Procesa llaves <RSA> (convertir formatos, extraer pública)                 |
