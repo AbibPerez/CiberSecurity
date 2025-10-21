@@ -62,7 +62,7 @@
 |-----------------------------------|-------------------------------------------------------------------------------|
 | dgst                              | -> Calcula y verifica resúmenes criptográficos                                |
 | Sintaxis                          | [openssl][dgst] [-algoritmo][archivo.txt]                                     |
-# Algoritmos disponibles
+#### Algoritmos disponibles
 | Algoritmo                         | Descripción                                                                   |
 |-----------------------------------|-------------------------------------------------------------------------------|
 | md2                               | -> Hash MD2 (obsoleto, inseguro)                                              |
