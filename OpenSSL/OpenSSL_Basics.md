@@ -117,7 +117,7 @@
 ### IDEA
 | Comando                           | Descripción                                                                   |
 |-----------------------------------|-------------------------------------------------------------------------------|
-|-idea-cbc/cfb/ecb/ofb              |  Usado en PGP anteriormente                                                   |
+| -idea-cbc/cfb/ecb/ofb              |  Usado en PGP anteriormente                                                  |
 ### RC2 (Rivest Ciphers)
 | Comando                           | Descripción                                                                   |
 |-----------------------------------|-------------------------------------------------------------------------------|
