@@ -1,7 +1,7 @@
 ## MODOS DE HASHCAT ('-m') POR TIPO DE HASH
 
 |   Tipo de Hash    |   Modo ('-m')     | Descripción breve                         |
-|-----------------------------------------------------------------------------------|
+|-------------------|-------------------|-------------------------------------------|
 | MD5               | 0                 | Hash simple                               |
 | SHA1              | 100               | Usado en Git, certificados, etc.          |
 | SHA256            | 1400              | Hash fuerte, usado en Open SSL y JWT      |
