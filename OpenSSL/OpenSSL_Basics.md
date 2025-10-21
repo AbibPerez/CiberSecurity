@@ -57,16 +57,21 @@
 | speed                             | -> Prueba el rendimiento de algoritmos criptográficos                         |               
 | version                           | -> Muestra la versión de OpenSSL                                              |
 
-==> </Message Digest (Hash)/> <==
-> Sintaxis ->> [openssl][dgst] [-algoritmo][archivo.txt]
-dgst                                -> Calcula y verifica resúmenes criptográficos
-*Algoritmos disponibles*
-md2                                 -> Hash MD2 (obsoleto, inseguro)
-md4                                 -> Hash MD4 (obsoleto, inseguro)
-md5                                 -> Hash MD5 (Inseguro para firmas)
-rmd160                              -> RIPEMD-160 (alternativa a SHA-1)
-sha                                 -> SHA genérico
-sha1                                -> SHA-1
+## Message Digest (Hash)
+| Sintaxis                          | [openssl][dgst] [-algoritmo][archivo.txt]                                     |
+|-----------------------------------|-------------------------------------------------------------------------------|
+| Comando                           | Descripción                                                                   |                                          
+|-----------------------------------|-------------------------------------------------------------------------------|
+| dgst                              | -> Calcula y verifica resúmenes criptográficos                                |
+|-----------------------------------|-------------------------------------------------------------------------------|
+| Algoritmos disponibles            | Descripción                                                                   |
+|-----------------------------------|-------------------------------------------------------------------------------|
+| md2                               | -> Hash MD2 (obsoleto, inseguro)                                              |
+| md4                               | -> Hash MD4 (obsoleto, inseguro)                                              |
+| md5                               | -> Hash MD5 (Inseguro para firmas)                                            |            
+| rmd160                            | -> RIPEMD-160 (alternativa a SHA-1)                                           |             
+| sha                               | -> SHA genérico                                                               |
+| sha1                              | -> SHA-1                                                                      |
 
 
 ==> </Ciphers/> <==
