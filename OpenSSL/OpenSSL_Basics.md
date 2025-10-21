@@ -45,15 +45,17 @@
 | nseq                              | -> convierte entre <ASN.1> y secuencias numeradas                             |
 | asn1parse                         | -> Analiza y muestra estructuras <ASN.1>                                      |
 
-==> </Conexiones & Debugging/> <==
-s_client                            -> Cliente SSL/TLS para probar conexiones seguras
-s_server                            -> Servidor SSL/TLS para pruebas
-s_time                              -> Mide el rendimiento de conexiones SSL/TLS
-sess_id                             -> Muestra y manipula sesiones SSL
-engine                              -> Lista y administra motores criptográficos de OpenSSL
-errstr                              -> Muestra el texto de un código de error de OpenSSL
-speed                               -> Prueba el rendimiento de algoritmos criptográficos
-version                             -> Muestra la versión de OpenSSL
+## Conexiones & Debugging
+| Comando                           | Descripción                                                                   |                                          
+|-----------------------------------|-------------------------------------------------------------------------------|
+| s_client                          | -> Cliente SSL/TLS para probar conexiones seguras                             |            
+| s_server                          | -> Servidor SSL/TLS para pruebas                                              |
+| s_time                            | -> Mide el rendimiento de conexiones SSL/TLS                                  |      
+| sess_id                           | -> Muestra y manipula sesiones SSL                                            | 
+| engine                            | -> Lista y administra motores criptográficos de OpenSSL                       |                 
+| errstr                            | -> Muestra el texto de un código de error de OpenSSL                          |              
+| speed                             | -> Prueba el rendimiento de algoritmos criptográficos                         |               
+| version                           | -> Muestra la versión de OpenSSL                                              |
 
 ==> </Message Digest (Hash)/> <==
 > Sintaxis ->> [openssl][dgst] [-algoritmo][archivo.txt]
