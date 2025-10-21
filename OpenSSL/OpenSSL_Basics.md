@@ -25,23 +25,25 @@
 | gendh                             | -> Genera llaves privadas <DH>                                                |
 | prime                             | -> Prueba si un número es primo                                               |
 
-==> </Certificados & PKI/> <==
-req                                 -> Crea y procesa solicitudes de certificados (CSR)
-x509                                -> Procesa certificados <X.509>
-verify                              -> Verifica certificados
-ca                                  -> Herramienta de Certificate Authority (firma de certificados)
-crl                                 -> Procesa listas de revocación de certificados (CRL)
-cr12pkcs7                           -> Convierte CRL a <PKCS#7>
-pkcs7                               -> Procesa estructuras <PKCS#7>
-pkcs8                               -> Convierte llaves privadas al formato <PKCS#8>
-pkcs12                              -> Procesa archivos <PKCS#12> (.p12/.pfx con certificados y llaves)
-cms                                 -> Procesa mensajes <CMS> (Cryptographic Message Syntax)
-smime                               -> Firma, encripta y procesa mensajes <S/MIME>
-spkac                               -> Procesa SPKAC (usado en generación de certificados por navegadores)
-ocsp                                -> Hace consultas <OCSP> para validar certificados en línea
-ts                                  -> Procesa <timestamping> (sellado de tiempo digital) 
-nseq                                -> convierte entre <ASN.1> y secuencias numeradas
-asn1parse                           -> Analiza y muestra estructuras <ASN.1>
+## Certificados & PKI
+| Comando                           | Descripción                                                                   |                                          
+|-----------------------------------|-------------------------------------------------------------------------------|
+| req                                 -> Crea y procesa solicitudes de certificados (CSR)                           |
+| x509                                -> Procesa certificados <X.509>                                               |
+| verify                              -> Verifica certificados                                                      |
+| ca                                  -> Herramienta de Certificate Authority (firma de certificados)               |
+| crl                                 -> Procesa listas de revocación de certificados (CRL)                         |
+| cr12pkcs7                           -> Convierte CRL a <PKCS#7>                                                   |
+| pkcs7                               -> Procesa estructuras <PKCS#7>                                               |
+| pkcs8                               -> Convierte llaves privadas al formato <PKCS#8>                              |
+| pkcs12                              -> Procesa archivos <PKCS#12> (.p12/.pfx con certificados y llaves)           |
+| cms                                 -> Procesa mensajes <CMS> (Cryptographic Message Syntax)                      |
+| smime                               -> Firma, encripta y procesa mensajes <S/MIME>                                |
+| spkac                               -> Procesa SPKAC (usado en generación de certificados por navegadores)        |
+| ocsp                                -> Hace consultas <OCSP> para validar certificados en línea                   |
+| ts                                  -> Procesa <timestamping> (sellado de tiempo digital)                         |
+| nseq                                -> convierte entre <ASN.1> y secuencias numeradas                             |
+| asn1parse                           -> Analiza y muestra estructuras <ASN.1>                                      |
 
 ==> </Conexiones & Debugging/> <==
 s_client                            -> Cliente SSL/TLS para probar conexiones seguras
