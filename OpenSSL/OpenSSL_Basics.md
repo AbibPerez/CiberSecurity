@@ -61,8 +61,8 @@
 | Comando                           | Descripción                                                                   |
 |-----------------------------------|-------------------------------------------------------------------------------|
 | dgst                              | -> Calcula y verifica resúmenes criptográficos                                |
-| Sintaxis                          | [openssl][dgst] [-algoritmo][archivo.txt]                                     |
-#### Algoritmos disponibles
+#### Sintaxis > openssl [dgst] -[algoritmo] archivo.txt                                     
+### Algoritmos disponibles
 | Algoritmo                         | Descripción                                                                   |
 |-----------------------------------|-------------------------------------------------------------------------------|
 | md2                               | -> Hash MD2 (obsoleto, inseguro)                                              |
@@ -72,69 +72,88 @@
 | sha                               | -> SHA genérico                                                               |
 | sha1                              | -> SHA-1                                                                      |
 
-
 ## Ciphers
+### AES —— CBC
+#### Sintaxis ->> [openssl][enc] [-aes-128/192/256-cbc] [-in][archivo.txt] [-out][archivo.enc] [-k][contraseña]
 | Comando                           | Descripción                                                                   |
 |-----------------------------------|-------------------------------------------------------------------------------|
-# Prefijo ==> openssl enc -...
-enc                                 -> Cifrado y descifrado de archivos con algoritmos simétricos
-*AES —— CBC*
-> Sintaxis ->> [openssl][enc] [-aes-128/192/256-cbc] [-in][archivo.txt] [-out][archivo.enc] [-k][contraseña]
--aes-128-cbc                        -> AES de 128 bits en modo CBC
--aes-192-cbc                        -> AES de 192 bits en modo CBC
--aes-256-cbc                        -> AES de 256 bits en modo CBC
-*AES —— ECB*
-> Sintaxis ->> [openssl][enc] [-aes-128/192/256-ecb] [-in][archivo.txt] [-out][archivo.enc] [-k][contraseña]
--aes-128-ecb                        -> AES de 128 bits en modo ECB
--aes-192-ecb                        -> AES de 192 bits en modo ECB
--aes-256-ecb                        -> AES de 256 bits en modo ECB
-*Camellia —— CBC*
--camellia-128-cbc                   -> Camellia de 128 bits en modo CBC
--camellia-192-cbc                   -> Camellia de 192 bits en modo CBC
--camellia-256-cbc                   -> Camellia de 256 bits en modo CBC
-*Camellia —— ECB*
--camellia-128-ecb                   -> Camellia de 128 bits en modo ECB
--camellia-192-ecb                   -> Camellia de 192 bits en modo ECB
--camellia-256-ecb                   -> Camellia de 256 bits en modo ECB
-*Blowfish(BF)*
--bf                                 -> Blowfish en modo CBC (by default)
--bf-cbc                             -> Blowfish en modo CBC (Cipher Block Chaining)
--bf-cfb                             -> Blowfish en modo CFB (Cipher Feedback)
--bf-ecb                             -> Blowfish en modo ECB (Electronic Codebook)
--bf-ofb                             -> Blowfish en modo OFB (Output Feedback)
-*DES*
--des-cbc/cfb/ecb/ofb                -> DES clásico
--des-ede-cbc/cfb/ecb/ofb            -> Double DES
--des-ede3-cbc/cfb/ecb/ofb           -> Triple DES
--desx                               -> Variante de DES con XOR extendido
-*IDEA*
--idea-cbc/cfb/ecb/ofb               -> Usado en PGP anteriormente
-*RC2 (Rivest Ciphers)*
--rc2                                -> RC2 en modo CBC (by default)
--rc2-40-cbc                         -> RC2 en CBC con clave de 40 bits
--rc2-64-cbc                         -> RC2 en CBC con clave de 64 bits
--rc2-cbc                            -> RC2 en CBC, requiere IV
--rc2-cfb                            -> RC2 en CFB (flujo)
--rc2-ecb                            -> RC2 en ECB (repite patrones => Inseguro)
--rc2-ofb                            -> RC2 en OFB (flujo), requiere IV
-*RC4*
--rc4                                -> RC4 genérico (flujo de bytes)
--rc4-40                             -> RC4 con clave de 40 bits
-*RC5*
--rc5                                -> RC5 genérico
--rc5-cbc                            -> RC5 en CBC
--rc5-cfb                            -> RC5 en CFB
--rc5-ecb                            -> RC5 en ECB
--rc5-ofb                            -> RC5 en OFB
-*SEED*
--seed                               -> SEED en CBC (by default)
--seed-cbc                           -> SEED en CBC (seguro usando IV aleatorio)
--seed-cfb                           -> SEED en CFB
--seed-ecb                           -> SEED en ECB
--seed-ofb                           -> SEED en OFB
-*CAST*
--cast                               -> CAST5 en modo CBC (by default)
--cast-cbc                           -> CAST5 en CBC (IV aleatorio)
--cast5-cfb                          -> CAST5 en CFB
--cast5-ecb                          -> CAST5 en ECB
--cast5-ofb                          -> CAST5 en OFB
+| -aes-128-cbc                      | -> AES de 128 bits en modo CBC                                                |    
+| -aes-192-cbc                      | -> AES de 192 bits en modo CBC                                                |
+| -aes-256-cbc                      | -> AES de 256 bits en modo CBC                                                |
+### AES —— ECB
+#### Sintaxis ->> [openssl][enc] [-aes-128/192/256-ecb] [-in][archivo.txt] [-out][archivo.enc] [-k][contraseña]
+| Comando                           | Descripción                                                                   |
+|-----------------------------------|-------------------------------------------------------------------------------|
+| -aes-128-ecb                      | -> AES de 128 bits en modo ECB                                                |
+| -aes-192-ecb                      | -> AES de 192 bits en modo ECB                                                |
+| -aes-256-ecb                      | -> AES de 256 bits en modo ECB                                                |
+### Camellia —— CBC
+| Comando                           | Descripción                                                                   |
+|-----------------------------------|-------------------------------------------------------------------------------|
+| -camellia-128-cbc                 | -> Camellia de 128 bits en modo CBC                                           |
+| -camellia-192-cbc                 | -> Camellia de 192 bits en modo CBC                                           |
+| -camellia-256-cbc                 | -> Camellia de 256 bits en modo CBC                                           |
+### Camellia —— ECB
+| Comando                           | Descripción                                                                   |
+|-----------------------------------|-------------------------------------------------------------------------------|
+| -camellia-128-ecb                 | -> Camellia de 128 bits en modo ECB                                           |
+| -camellia-192-ecb                 | -> Camellia de 192 bits en modo ECB                                           |
+| -camellia-256-ecb                 | -> Camellia de 256 bits en modo ECB                                           |
+### Blowfish(BF)
+| Comando                           | Descripción                                                                   |
+|-----------------------------------|-------------------------------------------------------------------------------|
+| -bf                               | -> Blowfish en modo CBC (by default)                                          |
+| -bf-cbc                           | -> Blowfish en modo CBC (Cipher Block Chaining)                               |
+| -bf-cfb                           | -> Blowfish en modo CFB (Cipher Feedback)                                     |
+| -bf-ecb                           | -> Blowfish en modo ECB (Electronic Codebook)                                 |
+| -bf-ofb                           | -> Blowfish en modo OFB (Output Feedback)                                     |
+### DES
+| Comando                           | Descripción                                                                   |
+|-----------------------------------|-------------------------------------------------------------------------------|
+| -des-cbc/cfb/ecb/ofb              | -> DES clásico                                                                |
+| -des-ede-cbc/cfb/ecb/ofb          | -> Double DES                                                                 |
+| -des-ede3-cbc/cfb/ecb/ofb         | -> Triple DES                                                                 |
+| -desx                             | -> Variante de DES con XOR extendido                                          |
+### IDEA
+| Comando                           | Descripción                                                                   |
+|-----------------------------------|-------------------------------------------------------------------------------|
+|-idea-cbc/cfb/ecb/ofb              | -> Usado en PGP anteriormente                                                 |
+### RC2 (Rivest Ciphers)
+| Comando                           | Descripción                                                                   |
+|-----------------------------------|-------------------------------------------------------------------------------|
+| -rc2                              | -> RC2 en modo CBC (by default)                                               |
+| -rc2-40-cbc                       | -> RC2 en CBC con clave de 40 bits                                            |
+| -rc2-64-cbc                       | -> RC2 en CBC con clave de 64 bits                                            |
+| -rc2-cbc                          | -> RC2 en CBC, requiere IV                                                    |                        
+| -rc2-cfb                          | -> RC2 en CFB (flujo)                                                         |                   
+| -rc2-ecb                          | -> RC2 en ECB (repite patrones => Inseguro)                                   |                                         
+| -rc2-ofb                          | -> RC2 en OFB (flujo), requiere IV                                            |                                
+### RC4
+| Comando                           | Descripción                                                                   |
+|-----------------------------------|-------------------------------------------------------------------------------|
+| -rc4                              | -> RC4 genérico (flujo de bytes)                                              |
+| -rc4-40                           | -> RC4 con clave de 40 bits                                                   |
+### RC5
+| Comando                           | Descripción                                                                   |
+|-----------------------------------|-------------------------------------------------------------------------------|
+| -rc5                              | -> RC5 genérico                                                               |
+| -rc5-cbc                          | -> RC5 en CBC                                                                 |
+| -rc5-cfb                          | -> RC5 en CFB                                                                 |
+| -rc5-ecb                          | -> RC5 en ECB                                                                 |
+| -rc5-ofb                          | -> RC5 en OFB                                                                 |
+### SEED
+| Comando                           | Descripción                                                                   |
+|-----------------------------------|-------------------------------------------------------------------------------|
+| -seed                             | -> SEED en CBC (by default)                                                   |
+| -seed-cbc                         | -> SEED en CBC (seguro usando IV aleatorio)                                   |
+| -seed-cfb                         | -> SEED en CFB                                                                |
+| -seed-ecb                         | -> SEED en ECB                                                                |
+| -seed-ofb                         | -> SEED en OFB                                                                |
+### CAST 
+| Comando                           | Descripción                                                                   |
+|-----------------------------------|-------------------------------------------------------------------------------|
+| -cast                             | -> CAST5 en modo CBC (by default)                                             |
+| -cast-cbc                         | -> CAST5 en CBC (IV aleatorio)                                                |
+| -cast5-cfb                        | -> CAST5 en CFB                                                               |
+| -cast5-ecb                        | -> CAST5 en ECB                                                               |
+| -cast5-ofb                        | -> CAST5 en OFB                                                               |
