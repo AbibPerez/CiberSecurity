@@ -1,5 +1,5 @@
 
-|                                                   Cifrado & Hashing                                               |
+## Cifrado & Hashing
 |-----------------------------------|-------------------------------------------------------------------------------|
 | Comando                           | Descripción                                                                   | 
 |-----------------------------------|-------------------------------------------------------------------------------|
@@ -9,7 +9,7 @@
 | ciphers                           | -> Lista de los cifrados disponibles en OpenSSL                               |
 | passwd                            | -> Genera contraseñas encriptadas                                             |
 
-|                                                   Llaves & Parámetros                                             |
+## Llaves & Parámetros                                             
 |-----------------------------------|-------------------------------------------------------------------------------|
 | genrsa                            | -> Genera llaves privadas <RSA>                                               |
 | rsa                               | -> Procesa llaves <RSA> (convertir formatos, extraer pública)                 |
